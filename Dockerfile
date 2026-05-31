@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN javac -d bin src/*.java
+RUN find src -name "*.java" > sources.txt && javac -d bin @sources.txt
 
 CMD ["java", "-cp", "bin", "Main"]
