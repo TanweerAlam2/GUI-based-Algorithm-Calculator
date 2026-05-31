@@ -6,4 +6,4 @@ COPY . .
 
 RUN find src -name "*.java" > sources.txt && javac -d bin @sources.txt
 
-CMD ["java", "-cp", "bin", "Main"]
+CMD ["java", "-cp", "bin", "algo_Calc.Frame"]
